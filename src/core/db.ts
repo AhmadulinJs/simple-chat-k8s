@@ -16,7 +16,7 @@ export default class Database {
     // eslint-disable-next-line max-len
 
     if (process.env.MONGO_AUTH_DISABLE) {
-      this.url = 'mongodb://localhost:27017/chat-app'
+      this.url = `mongodb://localhost:27017/${process.env.MONGODB_SERVER}`
     }
     console.log('DATABASE URL:', this.url)
   }
